@@ -4,18 +4,16 @@ export default StyleSheet.create({
     questionContainer:{
       backgroundColor: '#5895F5',
       flex: 1,
+      alignContent: 'stretch',
     },
 
     question: {
       margin: 10, 
       flex: 1,
       flexDirection: 'column',
-      alignContent: 'stretch', 
-      justifyContent: 'space-around', 
-      alignItems: 'center',
       borderRadius: 10,
       overflow: 'hidden',
-      backgroundColor: 'white'
+      backgroundColor: '#FFFFFF'
     },
 
     questionStyle:{
@@ -37,18 +35,20 @@ export default StyleSheet.create({
 
     buttonContainer:{
       flex: 1,
-      flexDirection: 'row',
-      // alignSelf: 'stretch',
-      alignContent: 'stretch',
-      alignItems: 'center',
-      justifyContent: 'space-around'
+      backgroundColor: '#454545', 
+      flexDirection: 'row'
     },
 
     button:{
-      fontSize: 15,
-      width: '50%',
       flex: 1,
-      marginLeft: 0,
-      paddingRight: 0
+      alignItems: 'center',
+      justifyContent: 'center',
+      margin: 2
     },
+
+    buttonText:{
+      fontSize: 17,
+      color: 'white',
+      fontWeight: 'bold'
+    }
 })

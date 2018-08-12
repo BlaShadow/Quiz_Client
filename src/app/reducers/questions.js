@@ -14,8 +14,6 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action) => {
-  console.log(`Action executed ${action.type}`);
-
   switch(action.type) {
 
     case SET_APP_NORMAL:
