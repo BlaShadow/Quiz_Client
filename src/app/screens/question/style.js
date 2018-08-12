@@ -15,4 +15,14 @@ export default StyleSheet.create({
         color: 'white',
         margin: 10
     },
+    loadingText:{
+        color: 'white',
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+    loadingContainer: {
+        justifyContent: 'center',
+        flex: 1
+    }
 });

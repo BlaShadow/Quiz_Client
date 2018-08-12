@@ -75,7 +75,10 @@ class QuestionScreen extends Component {
           style={[{minHeight: 250}] }>
 
           { this.props.isWating === true ? 
-            <Text>Loading Game...</Text>  : 
+            <View style={style.loadingContainer}>
+              <Text style={style.loadingText}>Loading Game...</Text>
+            </View>  
+            : 
             this.props.questions.map((questionItem) => 
               <View key={questionItem.id}>
                 <QuestionComponent question={questionItem} answerQuestion={this.answerQuestion} />
