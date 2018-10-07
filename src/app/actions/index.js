@@ -6,6 +6,9 @@ export const SET_APP_NORMAL = "SET_APP_NORMAL"
 export const LOAD_REMOTE_QUESTIONS = "LOAD_REMOTE_QUESTIONS"
 export const SAVE_REMOTE_QUESTIONS = "SAVE_REMOTE_QUESTIONS"
 
+export const LOAD_REMOTE_CATEORIES = "LOAD_REMOTE_CATEORIES"
+export const SAVE_REMOTE_CATEGORIES = "SAVE_REMOTE_CATEGORIES"
+
 export const CHANGE_CURRENT_PAGE = "CHANGE_CURRENT_PAGE"
 export const ANSWER_QUESTION = "ANSWER_QUESTION"
 export const SETUP_GAME = "SETUP_GAME"
@@ -58,3 +61,23 @@ export const loadRemoteQuestions = () => {
   }
 }
 
+export const saveRemoteCategories = (categories) => ({
+  type: SAVE_REMOTE_CATEGORIES,
+  categories
+})
+
+export const loadRemoteCateogires = () => {
+  return (dispatch) => {
+    //Wait state
+    dispatch(setAppAwait())
+
+    return triviaCategories()
+      .then(categories => {
+        //Normal state
+        dispatch(setAppNormal())
+
+        //Save result
+        dispatch(saveRemoteCategories(categories))
+      })
+  }
+}

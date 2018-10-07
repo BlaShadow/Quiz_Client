@@ -4,7 +4,13 @@ export const triviaCategories = () => {
   return fetch(url)
     .then(data => data.json())
     .then(data => {
+      //Raw data
       let categories = data.trivia_categories
+
+      //Generate unique id for each category
+      categories.forEach(item => {
+        item.identifier = generateUUID()
+      });
 
       return new Promise((resolve, reject) => {
         resolve(categories)

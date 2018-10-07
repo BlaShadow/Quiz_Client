@@ -1,6 +1,6 @@
 import { createStackNavigator } from 'react-navigation';
 
-import { HomeScreen, QuestionScreen, ResultScreen } from '../screens'
+import { HomeScreen, QuestionScreen, ResultScreen, CategoryScreen } from '../screens'
 
 const stack = createStackNavigator({
   Home: {
@@ -8,6 +8,9 @@ const stack = createStackNavigator({
     navigationOptions: {
         header: () => null
     }
+  },
+  category:{
+    screen: CategoryScreen,
   },
   questions: {
     screen: QuestionScreen

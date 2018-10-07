@@ -12,7 +12,7 @@ export default class HomeScreen extends Component {
   }
   
   startGameActionHandler(){
-    this.props.navigation.navigate('questions')
+    this.props.navigation.navigate('category')
   }
 
   render() {

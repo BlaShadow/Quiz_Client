@@ -4,13 +4,15 @@ import {
   SAVE_REMOTE_QUESTIONS,
   SETUP_GAME,
   SET_APP_NORMAL,
-  SET_APP_WAIT
+  SET_APP_WAIT,
+  SAVE_REMOTE_CATEGORIES
 } from './../actions'
 
 const initialState = {
   isWating: false,
   page: 0,
-  questions: []
+  questions: [],
+  categories: []
 }
 
 const reducer = (state = initialState, action) => {
@@ -27,6 +29,9 @@ const reducer = (state = initialState, action) => {
 
     case SAVE_REMOTE_QUESTIONS:
       return {...state, questions: action.questions};
+
+    case SAVE_REMOTE_CATEGORIES:
+      return {...state, categories: action.categories};
     
     case CHANGE_CURRENT_PAGE:
       return {...state, page: action.page}
