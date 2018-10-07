@@ -41,12 +41,12 @@ export const saveRemoteQuestions = (questions) => ({
   questions
 })
 
-export const loadRemoteQuestions = () => {
+export const loadRemoteQuestions = (category) => {
   return (dispatch) => {
     //Wait state
     dispatch(setAppAwait())
 
-    return questionsForCategory()
+    return questionsForCategory(category)
         .then(questions => {
             //Normal state
             dispatch(setAppNormal())
