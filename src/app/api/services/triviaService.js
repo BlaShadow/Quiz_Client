@@ -19,8 +19,7 @@ export const triviaCategories = () => {
 }
 
 export const questionsForCategory = (category) => {
-  // const url = "https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean"
-  const url = "https://opentdb.com/api.php?amount=10&category=22&type=boolean"
+  const url = `https://opentdb.com/api.php?amount=10&category=${category.id}&type=boolean`
 
   return fetch(url)
     .then(response => response.json())
