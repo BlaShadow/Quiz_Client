@@ -23,7 +23,8 @@ class CategoryScreen extends Component {
   }
 
   didSelectCategory(category){
-    console.log(category);
+    //Move to question screen with selected category
+    this.props.navigation.navigate('questions', {category})
   }
 
   render() {

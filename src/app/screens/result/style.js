@@ -12,8 +12,13 @@ export default StyleSheet.create({
         color: 'white', 
         textAlign: 'center'
     },
+    footer:{
+        flexDirection: 'row',
+        justifyContent: 'space-around'
+    },
     footerResult:{
         fontSize: 28, 
+        padding: 10,
         textAlign: 'center', 
         color: 'white'
     }

@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import { Text, View, ScrollView, TouchableHighlight } from 'react-native'
+import { Text, View, ScrollView } from 'react-native'
 
-import { ItemResult } from './../../components'
+import { ItemResult, HomeButton, PlayAgainButton } from './../../components'
 import style from './style'
 
 export default class ResultScreen extends Component {
   
   render() {
-    let questions = this.props.navigation.state.params.questions
+    let {questions, category} = this.props.navigation.state.params
     let successQuestions = questions.filter((item) => item.correctAnswer === item.response).length
     let scoreString = `You scored \n ${successQuestions} / ${questions.length}`
     
@@ -16,22 +16,19 @@ export default class ResultScreen extends Component {
         <Text style={style.scoreText}>{scoreString}</Text>
 
         <ScrollView>
-            <View style={style.resultContainer}>
-                {questions.map((item) => {
-                    let isCorrectAnswer = item.correctAnswer === item.response
+          <View style={style.resultContainer}>
+            {questions.map((item) => {
+              let isCorrectAnswer = item.correctAnswer === item.response
 
-                    return <ItemResult 
-                                key={item.id} 
-                                title={item.question} 
-                                success={isCorrectAnswer} 
-                            />
-                })}
-            </View>
+              return <ItemResult key={item.id} title={item.question} success={isCorrectAnswer} />
+            })}
+          </View>
         </ScrollView>
-        
-        <TouchableHighlight onPress={() => this.props.navigation.push('questions')}>
-          <Text style={style.footerResult}> Try again </Text>
-        </TouchableHighlight>
+
+        <View style={style.footer}>
+          <HomeButton onPress={() => this.props.navigation.popToTop()} />
+          <PlayAgainButton onPress={() => this.props.navigation.push('questions', {category})} />
+        </View>
       </View>
     )
   }

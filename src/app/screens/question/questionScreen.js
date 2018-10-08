@@ -13,6 +13,7 @@ import style from './style'
 class QuestionScreen extends Component {
 
   static navigationOptions = ({ navigation }) => ({
+      title: 'Quiz',
       headerLeft: <HeaderBackButton onPress={() => {
         navigation.popToTop()
       }} />
@@ -31,8 +32,11 @@ class QuestionScreen extends Component {
     //Reset game
     this.props.dispatch(setupNewGame())
 
+    //Selected category
+    let category = this.props.navigation.state.params.category
+
     //Load questions
-    this.props.dispatch(loadRemoteQuestions())
+    this.props.dispatch(loadRemoteQuestions(category))
   }
 
   scrollPageChanged(state){
@@ -56,7 +60,10 @@ class QuestionScreen extends Component {
       
       //Change page
       if(page === this.props.questions.length){
-        this.props.navigation.navigate('result', {questions: this.props.questions})
+        let category = this.props.navigation.state.params.category
+        let questions = this.props.questions
+
+        this.props.navigation.navigate('result', {category: category, questions: questions})
       } else {
         this.pagerComponent.current.setPage(page - 1)
       }

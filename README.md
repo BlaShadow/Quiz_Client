@@ -9,5 +9,5 @@ Simple react native app consuming a web service.
 https://opentdb.com
 
 **Icons**
-some icons from: https://www.flaticon.com
+Some icons from: https://www.flaticon.com
 
