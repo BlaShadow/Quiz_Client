@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ScrollView } from 'react-native'
+import { ScrollView, Text } from 'react-native'
 
 import { connect } from 'react-redux'
 
@@ -30,7 +30,8 @@ class CategoryScreen extends Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        {
+        { this.props.isWaiting ? 
+          <Text style={styles.loadingText}>Loading Quiz categories...</Text> :
           this.props.categories.map(item => (
             <Category key={item.identifier} 
                 categoryName={item.name} 
@@ -44,8 +45,9 @@ class CategoryScreen extends Component {
 
 const stateToProps = state => {
   let categories = state.questions.categories
+  let isWaiting = state.questions.isWaiting
 
-  return {categories}
+  return {categories, isWaiting}
 }
 
 export default connect(stateToProps)(CategoryScreen)

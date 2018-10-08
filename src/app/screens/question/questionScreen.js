@@ -71,7 +71,7 @@ class QuestionScreen extends Component {
   }
 
   render() {
-    let pagerText = this.props.isWating ? "" : `${this.props.page} of ${this.props.questions.length}`
+    let pagerText = this.props.isWaiting ? "" : `${this.props.page} of ${this.props.questions.length}`
 
     return (
       <View style={style.wrap}>
@@ -81,9 +81,9 @@ class QuestionScreen extends Component {
           onPageScrollStateChanged={this.scrollPageChanged}
           style={[{minHeight: 250}] }>
 
-          { this.props.isWating === true ? 
+          { this.props.isWaiting === true ? 
             <View style={style.loadingContainer}>
-              <Text style={style.loadingText}>Loading Game...</Text>
+              <Text style={style.loadingText}>Loading Questions...</Text>
             </View>  
             : 
             this.props.questions.map((questionItem) => 

@@ -9,7 +9,7 @@ import {
 } from './../actions'
 
 const initialState = {
-  isWating: false,
+  isWaiting: false,
   page: 0,
   questions: [],
   categories: []
@@ -19,10 +19,10 @@ const reducer = (state = initialState, action) => {
   switch(action.type) {
 
     case SET_APP_NORMAL:
-      return {...state, isWating: false};
+      return {...state, isWaiting: false};
     
     case SET_APP_WAIT:
-      return {...state, isWating: true};
+      return {...state, isWaiting: true};
 
     case SETUP_GAME:
       return initialState;
