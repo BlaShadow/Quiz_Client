@@ -7,9 +7,7 @@ import style from './style'
 export default class Category extends PureComponent {
   render() {
     return (
-      <TouchableHighlight 
-          onPress={this.props.onPressHandler} 
-          style={style.container}>
+      <TouchableHighlight  onPress={this.props.onPressHandler}  style={style.container}>
         <Text style={style.categoryName}>{this.props.categoryName}</Text>
       </TouchableHighlight>
     )

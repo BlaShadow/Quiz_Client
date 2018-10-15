@@ -9,7 +9,11 @@ import styles from './style'
 
 class CategoryScreen extends Component {
   static navigationOptions = {
-    title: 'Category'
+    title: 'Category',
+    headerStyle: {
+      backgroundColor: '#3989E1',
+    },
+    headerTintColor: '#FFF'
   };
 
   constructor(props) {
