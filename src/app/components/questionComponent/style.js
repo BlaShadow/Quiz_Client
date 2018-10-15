@@ -1,8 +1,8 @@
-import { StyleSheet } from "react-native"
+import EStyleSheet from 'react-native-extended-stylesheet'
 
-export default StyleSheet.create({
+export default EStyleSheet.create({
     questionContainer:{
-      backgroundColor: '#5895F5',
+      backgroundColor: 'transparent',
       flex: 1,
       alignContent: 'stretch',
     },
@@ -13,7 +13,7 @@ export default StyleSheet.create({
       flexDirection: 'column',
       borderRadius: 10,
       overflow: 'hidden',
-      backgroundColor: '#FFFFFF'
+      backgroundColor: '$white'
     },
 
     questionStyle:{
@@ -35,15 +35,17 @@ export default StyleSheet.create({
 
     buttonContainer:{
       flex: 1,
-      backgroundColor: '#454545', 
-      flexDirection: 'row'
+      flexDirection: 'row',
+      justifyContent: 'space-around',
     },
 
     button:{
-      flex: 1,
       alignItems: 'center',
       justifyContent: 'center',
-      margin: 2
+      backgroundColor: '#454545',
+      width: 70,
+      height: 70,
+      borderRadius: 35,
     },
 
     buttonText:{

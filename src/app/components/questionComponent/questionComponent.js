@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Text, View, TouchableHighlight } from 'react-native'
+import { Text, View, TouchableHighlight, Image } from 'react-native'
 
 import Color from 'color'
 import PropTypes from 'prop-types';
@@ -9,7 +9,10 @@ import style from './style'
 export default class QuestionComponent extends PureComponent {
   render() {
     let questionItem = this.props.question
-    let highLightColor = Color('#454545').lighten(0.5)
+
+    let agreeColor = Color('#1471D8')
+    let disagreeColor = agreeColor.lighten(0.5)
+    let highLightColor = agreeColor.lighten(0.4)
 
     return (
       <View style={style.questionContainer}>
@@ -20,23 +23,23 @@ export default class QuestionComponent extends PureComponent {
             <Text style={style.questionStyle}>
               {questionItem.question}
             </Text>
-            
-            <View style={style.buttonContainer}>
-              <TouchableHighlight 
-                  underlayColor={highLightColor}
-                  style={[style.button, {borderRightWidth: 2, borderRightColor: 'white'}]}
-                  onPress={() => this.props.answerQuestion(questionItem.id, true)}>
-                  <Text style={style.buttonText}>True</Text>
-              </TouchableHighlight>
-
-              <TouchableHighlight 
-                  underlayColor={highLightColor}
-                  style={style.button}
-                  onPress={() => this.props.answerQuestion(questionItem.id, false)}>
-                  <Text style={style.buttonText}>False</Text>
-              </TouchableHighlight>
-            </View>
           </View>
+        </View>
+
+        <View style={style.buttonContainer}>
+          <TouchableHighlight 
+              underlayColor={highLightColor}
+              style={[style.button, {backgroundColor: disagreeColor}]}
+              onPress={() => this.props.answerQuestion(questionItem.id, false)}>
+              <Image source={require('./assets/cancel-music.png')} style={{width: 30, height: 30}} />
+          </TouchableHighlight>
+          
+          <TouchableHighlight 
+              underlayColor={highLightColor}
+              style={[style.button, {backgroundColor: agreeColor}]}
+              onPress={() => this.props.answerQuestion(questionItem.id, true)}>
+              <Image source={require('./assets/check-mark.png')} style={{width: 30, height: 30}} />
+          </TouchableHighlight>
         </View>
       </View>
     )
