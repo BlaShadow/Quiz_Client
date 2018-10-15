@@ -2,14 +2,14 @@ import { StyleSheet } from "react-native"
 
 export default StyleSheet.create({
     wrap:{
-        backgroundColor: '#5895F5',
+        backgroundColor: '#D0E9FD',
         padding: 10,
         paddingTop: 40,
         flex: 1
     },
     scoreText:{
         fontSize: 22, 
-        color: 'white', 
+        color: '#5b677a', 
         textAlign: 'center'
     },
     footer:{
@@ -20,6 +20,6 @@ export default StyleSheet.create({
         fontSize: 28, 
         padding: 10,
         textAlign: 'center', 
-        color: 'white'
+        color: '#5b677a'
     }
 });

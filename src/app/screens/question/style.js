@@ -1,13 +1,13 @@
 import { StyleSheet } from "react-native"
 
-const padding = 15
+const padding = 5
 
 export default StyleSheet.create({
     wrap:{
         flex: 1,
         justifyContent: 'flex-start',
         padding: padding,
-        backgroundColor: '#5895F5',
+        backgroundColor: '#D0E9FD',
     },
     questionCounter:{
         textAlign: 'center',
