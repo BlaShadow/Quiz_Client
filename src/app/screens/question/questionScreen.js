@@ -14,7 +14,7 @@ class QuestionScreen extends Component {
 
   static navigationOptions = ({ navigation }) => ({
       title: 'Quiz',
-      headerLeft: <HeaderBackButton onPress={() => {
+      headerLeft: <HeaderBackButton tintColor="#fff" onPress={() => {
         navigation.popToTop()
       }} />
   });
@@ -79,7 +79,7 @@ class QuestionScreen extends Component {
           scrollEnabled={false}
           ref={this.pagerComponent} 
           onPageScrollStateChanged={this.scrollPageChanged}
-          style={[{minHeight: 250}] }>
+          style={[{minHeight: 350}] }>
 
           { this.props.isWaiting === true ? 
             <View style={style.loadingContainer}>
