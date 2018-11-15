@@ -1,13 +1,18 @@
 import React, { PureComponent } from 'react'
 import { Text, TouchableHighlight } from 'react-native'
 
+import Color from 'color'
 import PropTypes from 'prop-types'
 import style from './style'
 
 export default class Category extends PureComponent {
   render() {
+    let underlayColor = Color("#D0E9FD").darken(0.1)
+    
     return (
-      <TouchableHighlight  onPress={this.props.onPressHandler}  style={style.container}>
+      <TouchableHighlight
+        underlayColor={underlayColor}
+        onPress={this.props.onPressHandler}  style={style.container}>
         <Text style={style.categoryName}>{this.props.categoryName}</Text>
       </TouchableHighlight>
     )
