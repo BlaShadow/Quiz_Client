@@ -7,7 +7,9 @@ import style from './style'
 export class ButtonImage extends PureComponent {
   render() {
     return (
-      <TouchableHighlight onPress={this.props.onPress}>
+      <TouchableHighlight 
+        underlayColor={"#D0E9FD"} 
+        onPress={this.props.onPress}>
         <Image style={style.image} source={this.props.source} />
       </TouchableHighlight>
     )
