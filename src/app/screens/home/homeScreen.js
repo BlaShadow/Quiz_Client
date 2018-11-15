@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, Button, TouchableHighlight } from 'react-native'
 
+import { HeaderComponent } from './../../components'
 import style from './style'
 
 export default class HomeScreen extends Component {
@@ -18,14 +19,17 @@ export default class HomeScreen extends Component {
   render() {
     return (
       <View style={style.container}>
-        <Text style={style.title}>Wellcome to trivia Challence!</Text>
+        <HeaderComponent />
+
+        <Text style={style.title}>Quiz App!</Text>
 
         <View style={style.content}>
-          <Text style={style.contentText}>You will be presented with 10 True or false question.</Text>
-          <Text style={style.contentText}>Can you score 100%?</Text>
+          <Text style={style.contentText}>Test your general knowleadge.</Text>
         </View>
         
-        <TouchableHighlight onPress={this.startGameActionHandler}>
+        <TouchableHighlight 
+          underlayColor={"#D0E9FD"} 
+          onPress={this.startGameActionHandler}>
           <Text style={style.button}>Begin</Text>
         </TouchableHighlight>
       </View>
