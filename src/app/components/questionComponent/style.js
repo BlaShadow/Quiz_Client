@@ -21,7 +21,7 @@ export default EStyleSheet.create({
       textAlign: 'center', 
       margin: 5, 
       flex: 3, 
-      color: '$textColor',
+      color: '$textColorDark',
       alignSelf: 'stretch'
     },
 
@@ -29,7 +29,7 @@ export default EStyleSheet.create({
       textAlign: 'center',
       fontSize: 22,
       fontWeight: 'bold',
-      color: '$textColor',
+      color: '$textColorDark',
       flex: 1, 
       margin: 5
     },

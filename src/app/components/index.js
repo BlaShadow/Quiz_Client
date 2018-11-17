@@ -1,8 +1,9 @@
 import ItemResult from './itemResult/itemResultComponent'
 import QuestionComponent from './questionComponent/questionComponent'
-import CongratulationsComponente from './congratulationsComponent/congratulation'
+import CongratulationsComponent from './congratulationsComponent/congratulation'
 import Category from './category/categoryComponent'
 import LocalStatusBar from './localStatusBar/localStatusBar'
+import ResultComponent from './resultComponent/resultComponente'
 
 import { HomeButton, PlayAgainButton, ButtonImage } from './ButtonImage'
 import { HeaderComponent } from './header'
@@ -16,5 +17,6 @@ export {
   ButtonImage,
   HeaderComponent,
   LocalStatusBar,
-  CongratulationsComponente
+  CongratulationsComponent,
+  ResultComponent
 }
