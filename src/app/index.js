@@ -8,9 +8,10 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 
 EStyleSheet.build({
   $white: '#FFF',
-  $screenBackgroundColor: '#D0E9FD',
+  $screenBackgroundColor: '#4E9CEA',
   $navBarBackgroundColor: '#3989E1',
-  $textColor: '#78797F'
+  $textColor: 'white',
+  $textColorDark: '#78797F'
 });
 
 export default () => (
