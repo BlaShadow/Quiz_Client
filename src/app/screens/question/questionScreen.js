@@ -13,10 +13,10 @@ import style from './style'
 class QuestionScreen extends Component {
 
   static navigationOptions = ({ navigation }) => ({
-      title: 'Quiz',
-      headerLeft: <HeaderBackButton tintColor="#fff" onPress={() => {
-        navigation.popToTop()
-      }} />
+    title: 'Quiz',
+    headerLeft: <HeaderBackButton tintColor="#fff" onPress={() => {
+      navigation.popToTop()
+    }} />
   });
 
   constructor(props){

@@ -36,6 +36,6 @@ export default EStyleSheet.create({
     backgroundColor: '#2196F3',
     fontWeight: 'bold',
     padding: 5,
-    fontSize: 30
+    fontSize: 28
   }
 });

@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
-import { ScrollView, Text } from 'react-native'
+import { ScrollView, Text, StatusBar } from 'react-native'
 import { connect } from 'react-redux'
 import EStyleSheet from 'react-native-extended-stylesheet'
 
-import { Category } from './../../components'
+import { Category, LocalStatusBar } from './../../components'
 import { loadRemoteCateogires } from './../../actions'
 import styles from './style'
-
-console.log('global vars', EStyleSheet.globalVars)
 
 class CategoryScreen extends Component {
   static navigationOptions = {
