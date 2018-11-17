@@ -1,5 +1,6 @@
 import ItemResult from './itemResult/itemResultComponent'
 import QuestionComponent from './questionComponent/questionComponent'
+import CongratulationsComponente from './congratulationsComponent/congratulation'
 import Category from './category/categoryComponent'
 import LocalStatusBar from './localStatusBar/localStatusBar'
 
@@ -14,5 +15,6 @@ export {
   PlayAgainButton,
   ButtonImage,
   HeaderComponent,
-  LocalStatusBar
+  LocalStatusBar,
+  CongratulationsComponente
 }
