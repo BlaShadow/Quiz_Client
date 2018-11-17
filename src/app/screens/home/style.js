@@ -1,8 +1,8 @@
-import { StyleSheet } from "react-native"
+import EStyleSheet from 'react-native-extended-stylesheet'
 
-export default StyleSheet.create({
+export default EStyleSheet.create({
   container: {
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '$screenBackgroundColor',
     padding: 20,
     paddingTop: 60,
     flex: 1

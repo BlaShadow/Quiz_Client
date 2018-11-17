@@ -7,7 +7,8 @@ import store from './config/store';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 EStyleSheet.build({
-  $white: '#FFF'
+  $white: '#FFF',
+  $screenBackgroundColor: '#D0E9FD'
 });
 
 export default () => (

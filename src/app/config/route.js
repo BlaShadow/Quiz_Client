@@ -14,6 +14,7 @@ const stack = createStackNavigator({
     screen: HomeScreen,
     navigationOptions: {
       header: () => null,
+      ...navStyleOptions
     }
   },
   category:{

@@ -13,9 +13,9 @@ export default class ResultScreen extends Component {
     
     return (
       <View style={style.wrap}>
-        <Text style={style.scoreText}>{scoreString}</Text>
-
         <ScrollView>
+          <Text style={style.scoreText}>{scoreString}</Text>
+
           <View style={style.resultContainer}>
             {questions.map((item) => {
               let isCorrectAnswer = item.correctAnswer === item.response
