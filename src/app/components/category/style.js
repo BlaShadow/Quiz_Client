@@ -12,7 +12,7 @@ export default EStyleSheet.create({
     marginBottom: 10
   },
   categoryName: {
-    color: '$textColor',
+    color: '$textColorDark',
     textAlign: 'left',
     marginLeft: 5,
     fontSize: 20,

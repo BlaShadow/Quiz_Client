@@ -7,12 +7,12 @@ export default EStyleSheet.create({
   },
   contentContainer:{
     padding: 20,
-    paddingTop: 60,
+    paddingTop: 80,
     flexGrow: 1,
   },
   title: {
     fontSize: 35,
-    color: '#606060',
+    color: '$textColor',
     textAlign: 'center',
     fontWeight: 'bold'
   },
@@ -27,7 +27,7 @@ export default EStyleSheet.create({
   },
   contentText:{
     fontSize: 22,
-    color: '#78909C',
+    color: '$textColor',
     textAlign: 'center'
   },
   buttonContainer:{
