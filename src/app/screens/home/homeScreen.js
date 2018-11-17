@@ -32,6 +32,7 @@ export default class HomeScreen extends Component {
           
           <TouchableHighlight 
             underlayColor={"#D0E9FD"} 
+            style={style.buttonContainer}
             onPress={this.startGameActionHandler}>
             <Text style={style.button}>Begin</Text>
           </TouchableHighlight>
