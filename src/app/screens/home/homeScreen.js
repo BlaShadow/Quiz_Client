@@ -19,12 +19,14 @@ export default class HomeScreen extends Component {
   render() {
     return (
       <View style={style.container}>
-        <HeaderComponent />
+        <View style={style.contentContainer}>
+          <HeaderComponent />
 
-        <Text style={style.title}>Quiz App!</Text>
+          <Text style={style.title}>Quiz App!</Text>
 
-        <View style={style.content}>
-          <Text style={style.contentText}>Test your general knowleadge.</Text>
+          <View style={style.content}>
+            <Text style={style.contentText}>Test your general knowleadge.</Text>
+          </View>  
         </View>
         
         <TouchableHighlight 

@@ -9,7 +9,8 @@ export default EStyleSheet.create({
   },
   questionCounter:{
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: 22,
+    fontWeight: 'bold',
     color: 'white',
     margin: 10
   },

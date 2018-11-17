@@ -3,9 +3,12 @@ import EStyleSheet from 'react-native-extended-stylesheet'
 export default EStyleSheet.create({
   container: {
     backgroundColor: '$screenBackgroundColor',
+    flex: 1
+  },
+  contentContainer:{
     padding: 20,
     paddingTop: 60,
-    flex: 1
+    flexGrow: 1,
   },
   title: {
     fontSize: 35,
@@ -28,10 +31,11 @@ export default EStyleSheet.create({
     textAlign: 'center'
   },
   button:{
-    margin: 20,
     textAlign: 'center', 
-    color: '#78909C',
+    color: 'white',
+    backgroundColor: '#2196F3',
     fontWeight: 'bold',
-    fontSize: 25
+    padding: 5,
+    fontSize: 30
   }
 });
