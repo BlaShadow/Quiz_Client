@@ -1,6 +1,6 @@
-import { StyleSheet } from "react-native"
+import EStyleSheet from "react-native-extended-stylesheet"
 
-export default StyleSheet.create({
+export default EStyleSheet.create({
   container:{
     flex: 1,
     backgroundColor: '#FCFDFD',
@@ -12,7 +12,7 @@ export default StyleSheet.create({
     marginBottom: 10
   },
   categoryName: {
-    color: '#78797F',
+    color: '$textColor',
     textAlign: 'left',
     marginLeft: 5,
     fontSize: 20,

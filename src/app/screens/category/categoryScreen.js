@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
 import { ScrollView, Text } from 'react-native'
-
 import { connect } from 'react-redux'
+import EStyleSheet from 'react-native-extended-stylesheet'
 
 import { Category } from './../../components'
 import { loadRemoteCateogires } from './../../actions'
 import styles from './style'
 
+console.log('global vars', EStyleSheet.globalVars)
+
 class CategoryScreen extends Component {
   static navigationOptions = {
     title: 'Category',
     headerStyle: {
-      backgroundColor: '#3989E1',
+      backgroundColor: () => EStyleSheet.value('$navBarBackgroundColor'),
     },
     headerTintColor: '#FFF'
   };

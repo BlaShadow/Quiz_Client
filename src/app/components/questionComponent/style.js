@@ -21,14 +21,15 @@ export default EStyleSheet.create({
       textAlign: 'center', 
       margin: 5, 
       flex: 3, 
-      color: '#333333',
+      color: '$textColor',
       alignSelf: 'stretch'
     },
 
     title: {
       textAlign: 'center',
       fontSize: 22,
-      color: '#333333',
+      fontWeight: 'bold',
+      color: '$textColor',
       flex: 1, 
       margin: 5
     },
