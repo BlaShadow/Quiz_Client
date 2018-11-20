@@ -2,7 +2,6 @@ import { StyleSheet } from "react-native"
 
 export default StyleSheet.create({
   wrap:{
-    padding: 5,
     margin: 5,
     flex: 1,
     flexDirection: 'row',
@@ -15,6 +14,7 @@ export default StyleSheet.create({
   },
   title:{
     fontSize: 15,
-    color: '#263238'
+    color: '#263238',
+    flex: 1,
   }
 });
