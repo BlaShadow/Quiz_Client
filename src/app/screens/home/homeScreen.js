@@ -19,6 +19,7 @@ export default class HomeScreen extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
+        <LocalStatusBar  />
         <View style={style.container}>
           <View style={style.contentContainer}>
             <HeaderComponent />
