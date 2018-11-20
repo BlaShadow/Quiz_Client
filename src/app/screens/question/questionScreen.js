@@ -59,17 +59,18 @@ class QuestionScreen extends Component {
       let page = this.props.page
 
       console.log("Current page", page);
-
-      this.props.dispatch(changeCurrentPage(page + 1))
-
       //Change page
       if(page === (totalItems - 1)){
         let category = this.props.navigation.state.params.category
         let questions = this.props.questions
         let params = {category: category, questions: questions}
+        
+        this.props.dispatch(changeCurrentPage(0))
 
         this.props.navigation.navigate('result', params)
       } else {
+        this.props.dispatch(changeCurrentPage(page + 1))
+
         this.pagerComponent.current.setPage(page + 1)
       }
     }
