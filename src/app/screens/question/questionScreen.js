@@ -53,25 +53,30 @@ class QuestionScreen extends Component {
   }
 
   componentWillReceiveProps(){
-    if(this.props.page <= this.props.questions.length && this.pagerComponent.current != null){
-      let page = this.props.page + 1
-  
-      this.props.dispatch(changeCurrentPage(page))
-      
+    let totalItems = this.props.questions.length
+
+    if(totalItems !== 0 && this.props.page <= totalItems && this.pagerComponent.current != null){
+      let page = this.props.page
+
+      console.log("Current page", page);
+
+      this.props.dispatch(changeCurrentPage(page + 1))
+
       //Change page
-      if(page === this.props.questions.length){
+      if(page === (totalItems - 1)){
         let category = this.props.navigation.state.params.category
         let questions = this.props.questions
+        let params = {category: category, questions: questions}
 
-        this.props.navigation.navigate('result', {category: category, questions: questions})
+        this.props.navigation.navigate('result', params)
       } else {
-        this.pagerComponent.current.setPage(page - 1)
+        this.pagerComponent.current.setPage(page + 1)
       }
     }
   }
 
   render() {
-    let pagerText = this.props.isWaiting ? "" : `${this.props.page} of ${this.props.questions.length}`
+    let pagerText = this.props.isWaiting ? "" : `${this.props.page + 1} of ${this.props.questions.length}`
 
     return (
       <View style={style.wrap}>
