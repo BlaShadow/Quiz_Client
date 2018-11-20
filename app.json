@@ -1,5 +1,7 @@
 {
   "expo": {
     "sdkVersion": "31.0.0"
-  }
+  },
+  "name": "Quiz_Client",
+  "displayName": "yes"
 }
