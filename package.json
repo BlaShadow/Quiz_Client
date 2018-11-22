@@ -19,7 +19,8 @@
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "test": "jest"
+    "test": "jest",
+    "copy-assets": "react-native bundle --assets-dest ./android/app/src/main/res/ --entry-file ./index.js --bundle-output ./android/app/src/main/assets/index.android.bundle --platform android --dev false"
   },
   "jest": {
     "preset": "react-native"
